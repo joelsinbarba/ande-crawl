@@ -30,7 +30,7 @@ func dayCheck() {
 	//This is updated daily so we check if it is our desired date every day
 	currentTime := time.Now().Local()
 	day := currentTime.Day()
-	if day != 28 {
+	if day != 11 {
 		return
 	}
 	doCrawl()
