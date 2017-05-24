@@ -16,8 +16,7 @@ func main() {
 	// Con esto metemos el servidor web en una goroutine
 	go status.Listen()
 
-	gocron.Every(1).Minute().Do(dayCheck)
-	//gocron.Every(1).Day().Do(dayCheck)
+	gocron.Every(1).Day().Do(dayCheck)
 	// remove, clear and next_run
 	_, time := gocron.NextRun()
 	fmt.Println(time)
